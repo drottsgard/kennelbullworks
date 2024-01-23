@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sv">
-      <body className={`${inter.className} flex flex-col text-primary`}>
+      <body className={`${inter.className} flex flex-col text-primary min-h-[100vh]`}>
         <header className="
           flex justify-between items-center
           p-4
@@ -45,7 +45,11 @@ export default function RootLayout({
         <main className="flex h-auto flex-col items-center justify-between">
           {children}
         </main>
-        <footer className="min-h-[20px] bg-red-500">footer</footer>
+        <footer className="flex flex-col gap-3 h-[124px] bg-brown-400 pt-8 md:gap-6 md:pt-16 md:pb-8 md:px-28 md:h-[188px]">
+          <h4 className="text-center">Skurup, Skåne</h4>
+          <div className="min-h-[1px] w-full bg-primary"/>
+          <p className="text-center text-xs font-thin">Designed with ♥ by Madeleine</p>
+        </footer>
       </body>
     </html>
   )

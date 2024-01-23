@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import HeroImage from '../../public/hero.png';
 import ButtonLink, { ButtonVariant } from './Button';
 import TextContent from './TextContent';
 
@@ -12,34 +13,44 @@ export default function Hero() {
           flex
           flex-col
           gap-6
+
+          md:flex-row
+          md:items-center
+          md:justify-between
+          md:gap-0
+          md:pl-28
+          md:pr-0
         "
       style={{ height: '534px' }}
     >
       <TextContent
         title="En ärvd passion för hundar"
         content={
-          <p>
-            Vi är glada att meddela att vi har valpar tillgängliga för att
-            berika ditt liv med kärlek och glädje.
-          </p>
+          <div className="flex gap-2 flex-col">
+            <p>
+              Vi är glada att meddela att vi har valpar tillgängliga för att
+              berika ditt liv med kärlek och glädje.
+            </p>
+            <div className="flex gap-2">
+              <ButtonLink variant={ButtonVariant.Primary} onClick={() => {}}>
+                Våra valpar
+              </ButtonLink>
+              <ButtonLink variant={ButtonVariant.Secondary} onClick={() => {}}>
+                Om oss
+              </ButtonLink>
+            </div>
+          </div>
         }
       />
       {/* kanske till Konakta oss ifall vi inte har valpar */}
-      <div className="flex gap-2">
-        <ButtonLink variant={ButtonVariant.Primary} onClick={() => {}}>
-          Våra valpar
-        </ButtonLink>
-        <ButtonLink variant={ButtonVariant.Secondary} onClick={() => {}}>
-          Om oss
-        </ButtonLink>
+      <div className="relative self-center w-52 h-52 md:w-full md:h-full ">
+        <Image
+          src={HeroImage}
+          fill
+          alt="Cocker spaniel puppies"
+          className="md:object-contain"
+        />
       </div>
-      <Image
-        className="self-center"
-        src="/hero.png"
-        width={220}
-        height={220}
-        alt="Cocker spaniel puppies"
-      />
     </div>
   );
 }

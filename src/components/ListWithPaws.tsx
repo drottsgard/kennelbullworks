@@ -21,7 +21,7 @@ type ListWithPawsProps = {
 
 function ListWithPaws({ items }: ListWithPawsProps) {
   return (
-    <ul className="flex flex-col gap-12">
+    <ul className="flex flex-col gap-12 md:mx-28">
       {items.map((item, index) => (
         <ListItemWithPaws key={item.title} item={item} index={index + 1} />
       ))}
@@ -61,7 +61,7 @@ function ListItemWithPaws({
           ))}
         </div>
         <div className="flex flex-col gap-3">
-          <p>{item.text}</p>
+          <p className="md:max-w-xl">{item.text}</p>
           {item.linkOptions && (
             <AppLink to={item.linkOptions.linkTo}>
               {item.linkOptions.linkText}

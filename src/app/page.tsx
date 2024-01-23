@@ -1,30 +1,26 @@
 import Image from 'next/image';
 
-import ButtonLink, { ButtonVariant } from '@/components/Button';
 import TextContent from '@/components/TextContent';
 import ListWithPaws from '@/components/ListWithPaws';
 import Hero from '@/components/Hero';
 import BulletList from '@/components/BulletList';
+import Heading3 from '@/components/Typography/Heading';
+import Parapgraph from '@/components/Typography/Paragraph';
 
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 w-full">
       <Hero />
-      <div className="px-8">
-        <TextContent
-          title="Att köpa valp av oss"
-          content={
-            <p>
-              Vi är inte bara med er från starten, utan kommer att finnas till
-              hands med support och råd under lång tid framöver. Dolda
-              fel-försäkring från Agria ingår självklart. Alla valpar får också
-              med sig ett valppaket från Purina Pro Plan och vårt informativa
-              valphäfte. De kommer fullständigt veterinärbesiktade, vaccinerade,
-              avmaskade och registrerade i SKK.
-            </p>
-          }
-        />
+      <div className="px-8 flex flex-col gap-4 md:px-28 items-center">
+        <Heading3>Att köpa valp av oss</Heading3>
+        <Parapgraph className="md:max-w-[800px]">Vi är inte bara med er från starten, utan kommer att finnas till
+          hands med support och råd under lång tid framöver. Dolda
+          fel-försäkring från Agria ingår självklart. Alla valpar får också
+          med sig ett valppaket från Purina Pro Plan och vårt informativa
+          valphäfte. De kommer fullständigt veterinärbesiktade, vaccinerade,
+          avmaskade och registrerade i SKK.
+        </Parapgraph>
       </div>
       <BulletList
         items={[
@@ -34,10 +30,11 @@ export default function Home() {
           'Valppaket & Valphäfte',
         ]}
       />
-      <div className="p-8 bg-brown-400">
-        <h3 className="text-2xl mb-8">
-          Gör ditt hem komplett – med en kärleksfull Cocker Spaniel-valp vid din
-          sida!
+      <div className="flex flex-col p-8 bg-brown-400 md:mx-28 md:rounded-2xl md:items-center">
+        <h3 className="text-2xl mb-8 md:mx-28">
+          Gör ditt hem komplett
+          <br className="hidden md:inline" />
+          - med en kärleksfull Cocker Spaniel-valp vid din sida!
         </h3>
         <ListWithPaws
           items={[
@@ -71,22 +68,17 @@ export default function Home() {
           ]}
         />
       </div>
-      <div className="px-8 flex flex-col gap-8">
+      <div className="px-8 mb-8 flex flex-col gap-8 md:px-28">
         <TextContent
           title="Låt oss få lära känna er!"
           content={
             <p>
-              Skicka oss gärna ett meddelande så berättar vi mer om vår kennel
-              och oss själva. Vi ser fram emot att höra mer om er och diskutera
-              hur en av våra förtjusande Engelska Cocker Spaniel-valpar kan bli
-              en perfekt matchning för er.
-              <br /> <br /> Ni kan alltid skicka ett meddelande på våra sociala
-              medier också.
+              Skicka ett meddelande till oss på våra sociala medier
             </p>
           }
         />
-        <ul className="flex flex-col gap-4">
-          <li>
+        <ul className="flex flex-col gap-4 md:flex-row">
+          <li className="md:mr-auto">
             <a
               href="https://www.facebook.com/kennelbullworks"
               className="flex gap-2"
@@ -100,7 +92,7 @@ export default function Home() {
               <p>Kennel Bullworks</p>
             </a>
           </li>
-          <li>
+          <li className="md:mr-auto">
             <a
               href="https://www.instagram.com/bullworkscockers"
               className="flex gap-2"
