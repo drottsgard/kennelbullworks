@@ -39,8 +39,6 @@ export default function RootLayout({
           lg:py-8 lg:px-20"
         >
           <h1 className="text-xl font-bold lg:text-4xl"><Link href="/">Kennel Bullworks</Link></h1>
-          <DesktopHeader />
-          <MobileHeader />
         </header>
         <main className="flex h-auto flex-col items-center justify-between">
           {children}

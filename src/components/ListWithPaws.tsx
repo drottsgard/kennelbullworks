@@ -62,11 +62,6 @@ function ListItemWithPaws({
         </div>
         <div className="flex flex-col gap-3">
           <p className="md:max-w-xl">{item.text}</p>
-          {item.linkOptions && (
-            <AppLink to={item.linkOptions.linkTo}>
-              {item.linkOptions.linkText}
-            </AppLink>
-          )}
         </div>
       </div>
     </li>

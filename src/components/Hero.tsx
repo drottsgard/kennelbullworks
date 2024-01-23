@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import HeroImage from '../../public/hero.png';
+import HeroImage from 'public/hero.png';
 import ButtonLink, { ButtonVariant } from './Button';
 import TextContent from './TextContent';
 
@@ -31,14 +31,6 @@ export default function Hero() {
               Vi är glada att meddela att vi har valpar tillgängliga för att
               berika ditt liv med kärlek och glädje.
             </p>
-            <div className="flex gap-2">
-              <ButtonLink variant={ButtonVariant.Primary} onClick={() => {}}>
-                Våra valpar
-              </ButtonLink>
-              <ButtonLink variant={ButtonVariant.Secondary} onClick={() => {}}>
-                Om oss
-              </ButtonLink>
-            </div>
           </div>
         }
       />
