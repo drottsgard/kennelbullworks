@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-8 w-full">
       <Hero />
-      <div className="px-8 flex flex-col gap-4 md:px-28 items-center">
-        <Heading3>Att köpa valp av oss</Heading3>
+      <div className="px-8 flex flex-col gap-4 md:px-28 md:items-center">
+        <Heading3 className="">Att köpa valp av oss</Heading3>
         <Parapgraph className="md:max-w-[800px]">Vi är inte bara med er från starten, utan kommer att finnas till
           hands med support och råd under lång tid framöver. Dolda
           fel-försäkring från Agria ingår självklart. Alla valpar får också

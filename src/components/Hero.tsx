@@ -16,7 +16,7 @@ export default function Hero() {
 
           md:flex-row
           md:items-center
-          md:justify-between
+          md:justify-evenly
           md:gap-0
           md:pl-28
           md:pr-0
@@ -27,15 +27,15 @@ export default function Hero() {
         title="En ärvd passion för hundar"
         content={
           <div className="flex gap-2 flex-col">
-            <p>
-              Vi är glada att meddela att vi har valpar tillgängliga för att
-              berika ditt liv med kärlek och glädje.
+            <p className="md:max-w-lg">
+              Vi är två syskon som tillsammans med våra respektive föder upp engelsk cocker spaniel.
+              Vår passion för hundar har vi ärvt från våra föräldrar som har fött upp hundar sedan innan vi föddes.
             </p>
           </div>
         }
       />
       {/* kanske till Konakta oss ifall vi inte har valpar */}
-      <div className="relative self-center w-52 h-52 md:w-full md:h-full ">
+      <div className="relative self-center w-64 h-64 md:w-[500px] md:h-full ">
         <Image
           src={HeroImage}
           fill
