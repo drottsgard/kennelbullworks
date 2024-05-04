@@ -15,18 +15,17 @@ export default function Home() {
       <div className="px-8 flex flex-col gap-4 md:px-28 md:items-center">
         <Heading3 className="">Att köpa valp av oss</Heading3>
         <Parapgraph className="md:max-w-[800px]">Vi är inte bara med er från starten, utan kommer att finnas till
-          hands med support och råd under lång tid framöver. Dolda
-          fel-försäkring från Agria ingår självklart. Alla valpar får också
+          hands med support och råd under lång tid framöver. Alla valpar får också
           med sig ett valppaket från Purina Pro Plan och vårt informativa
           valphäfte. De kommer fullständigt veterinärbesiktade, vaccinerade,
-          avmaskade och registrerade i SKK.
+          avmaskade och registrerade i SKK. Dolda felförsäkring ingår alltid.
         </Parapgraph>
       </div>
       <BulletList
         items={[
           'Veterinärbesiktning',
           'Registrering i SKK',
-          'Försäkring från Agria',
+          'Felförsäkring',
           'Valppaket & Valphäfte',
         ]}
       />
@@ -39,31 +38,31 @@ export default function Home() {
         <ListWithPaws
           items={[
             {
-              title: 'Lär känna oss och vår kärlek till Cocker Spaniel',
-              text: 'Vi har en ärvd passion för hundar och är tillägnade till Cocker Spanielns charm. Detta vill vi dela med oss till er.',
-              numOfPaws: 4,
-              linkOptions: {
-                linkTo: '/om-oss',
-                linkText: 'Läs mer om oss',
-              },
-            },
-            {
               title: 'Läs mer om den fantastiska hundrasen Cocker Spaniel',
               text: 'Vill du dela ditt liv med en underbar följeslagare som alltid är där för dig, redo för alla äventyr vare sig det är i skogen eller mitt i stadspulsen? Då är Engelsk Cocker Spaniel den perfekta rasen för dig. Deras oemotståndliga charm och positiva personlighet gör dem till fantastiska kamrater.',
               linkOptions: {
                 linkTo: 'https://www.skk.se', // TODO: Fix link
                 linkText: 'Läs mer om cocker spaniel',
               },
-              numOfPaws: 6,
+              numOfPaws: 3,
+            },
+            {
+              title: 'Känns Cocker Spaniel som rätt ras för dig?',
+              text: 'Vi känner ett stort ansvar för att våra valpar hamnar i rätt hem och att de får det liv de förtjänar. Därför vill vi lära känna er, men också att ni ska känna er trygga med ert val av en valp från oss',
+              numOfPaws: 3,
+              linkOptions: {
+                linkTo: '/om-oss',
+                linkText: 'Läs mer om oss',
+              },
             },
             {
               title: 'Upptäck våra bedårande Cocker Spaniel valpar',
-              text: 'Valparna är uppväxta i vårt vardagsrum och kommer vara vana vid all bök och stök från dammsugare till gäster och får bra social kontakt från början. Våra valpar är redo att flytta till sina nya hem vid åtta veckors ålder, från och med den 22e november.',
+              text: 'Alla våra valpar växer upp inomhus nära oss och kommer att vara vana vid all bök och stök från dammsugare till gäster och får bra social kontakt från början. Våra valpar är redo att flytta till sina nya hem vid åtta veckors ålder.',
               linkOptions: {
                 linkTo: '/vara-hundar',
                 linkText: 'Upptäck våra valpar',
               },
-              numOfPaws: 6,
+              numOfPaws: 3,
             },
           ]}
         />
