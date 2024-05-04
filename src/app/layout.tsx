@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -87,6 +88,7 @@ export default function RootLayout({
         </header>
         <main className="flex h-auto flex-col items-center justify-between">
           {children}
+          <Analytics />
         </main>
         <footer className="flex flex-col gap-3 h-[124px] bg-brown-400 pt-8 md:gap-6 md:pt-16 md:pb-8 md:px-28 md:h-[188px]">
           <h4 className="text-center">Skurup, Skåne</h4>
