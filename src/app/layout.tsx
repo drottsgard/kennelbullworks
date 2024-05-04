@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
-import opImage from '../../public/final.png';
+import opImage from '../../public/opengraph-image.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     title: 'Kennel Bullworks',
     description:
       'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.',
+    images: [
+      {
+        url: opImage.src,
+        width: opImage.width,
+        height: opImage.height,
+      },
+    ],
   },
   description:
     'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.',
