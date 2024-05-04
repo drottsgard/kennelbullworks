@@ -4,11 +4,19 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
+import opImage from '../../public/final.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Kennel Bullworks',
+  openGraph: {
+    url: 'https://kennelbullworks.se',
+    type: 'website',
+    title: 'Kennel Bullworks',
+    description:
+      'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.',
+  },
   description:
     'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.',
 };
