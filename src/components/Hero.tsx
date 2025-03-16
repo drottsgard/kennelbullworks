@@ -1,14 +1,16 @@
 import Image from 'next/image';
-import HeroImage from 'public/final.png';
-import ButtonLink, { ButtonVariant } from './Button';
-import TextContent from './TextContent';
+
+import ImageBibbi from 'public/bibbi.jpeg';
+import ImageBeaValparKorg from 'public/bea_valpar_korg.jpeg';
+import ImageAlexFilippa from 'public/alex_filippa.jpg';
 
 export default function Hero() {
   return (
     <div
       className="
           bg-brown-400 w-full
-          py-12 lg:pt-6
+          py-12
+          lg:pt-6
           px-8
           flex
           flex-col
@@ -23,22 +25,45 @@ export default function Hero() {
         "
       style={{ height: '534px' }}
     >
-      <TextContent
-        title="En ärvd passion för hundar"
-        content={
-          <div className="flex gap-2 flex-col">
-            <p className="md:max-w-lg">
-              Vi är två syskon som tillsammans med våra respektive föder upp
-              Engelsk Cocker Spaniel. Vår passion för hundar har vi ärvt från
-              våra föräldrar som har fött upp hundar sedan innan vi föddes.
-            </p>
-          </div>
-        }
-      />
-      {/* kanske till Konakta oss ifall vi inte har valpar */}
-      <div className="relative self-center w-64 h-64 md:w-[800px] md:h-full ">
+      <div
+        className="
+        relative
+        self-center
+        w-full
+        h-full
+        md:w-[800px]
+        hidden
+        md:block
+        md:h-full"
+      >
         <Image
-          src={HeroImage}
+          src={ImageBibbi}
+          fill
+          alt="Our dogs, Bea, Bianca, Bali and Bibbi"
+          className="md:object-contain"
+        />
+      </div>
+      <div className="relative self-center w-full h-full md:w-[800px] md:h-full brightness-125">
+        <Image
+          src={ImageAlexFilippa}
+          fill
+          alt="Our dogs, Bea, Bianca, Bali and Bibbi"
+          className="md:object-contain"
+        />
+      </div>
+      <div
+        className="
+        relative
+        self-center
+        w-full
+        h-full
+        md:w-[800px]
+        hidden
+        md:block
+        md:h-full"
+      >
+        <Image
+          src={ImageBeaValparKorg}
           fill
           alt="Our dogs, Bea, Bianca, Bali and Bibbi"
           className="md:object-contain"

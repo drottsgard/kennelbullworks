@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 
-import { DogName, dogs } from '@/dogs';
+import { DogName, DOGS } from '@/dogs';
 
 export default async function Page({
   params,
@@ -10,7 +10,7 @@ export default async function Page({
 }) {
   const { dog } = await params;
 
-  const dogData = dogs[dog];
+  const dogData = DOGS[dog];
 
   if (!dogData) {
     redirect('/hundar');

@@ -1,12 +1,20 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
+import { Libre_Baskerville } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
 import opImage from '../../public/opengraph-image.png';
+import MobileMenu from '@/components/MobileHeader';
 
-const inter = Inter({ subsets: ['latin'] });
+import PurinaProPlan from 'public/Purina_Pro_Plan.png';
+import SKKUppfodare from 'public/skk.png';
+import Cockerklubben from 'public/Cockerklubben.gif';
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'Kennel Bullworks',
@@ -28,27 +36,49 @@ export const metadata: Metadata = {
     'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.',
 };
 
-function DesktopHeader() {
+function DesktopMenu() {
   return (
-    <nav className="hidden lg:block">
-      <ul className="flex gap-8">
-        <li>
-          <Link href="/">Hem</Link>
-        </li>
-        <li>
-          <Link href="/om-oss">Om oss</Link>
-        </li>
-        <li>
-          <Link href="/vara-hundar">Våra hundar</Link>
-        </li>
-        <li>
-          <Link href="/valpar">Valpar</Link>
-        </li>
-        <li>
-          <Link href="/cocker-spaniel">Om Cocker Spaniel</Link>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav className="hidden lg:block uppercase">
+        <ul className="flex gap-8">
+          <li>
+            <Link className="hover:text-slate-400" href="/">
+              Hem
+            </Link>
+          </li>
+          |
+          <li>
+            <Link className="hover:text-slate-400" href="/hundar">
+              Våra hundar
+            </Link>
+          </li>
+          |
+          <li>
+            <Link className="hover:text-slate-400" href="/om-oss">
+              Om oss
+            </Link>
+          </li>
+          |
+          <li>
+            <Link className="hover:text-slate-400" href="/kontakt">
+              Kontakt
+            </Link>
+          </li>
+          |
+          <li>
+            <Link className="hover:text-slate-400" href="/valpar">
+              Valpar/Köpa hund
+            </Link>
+          </li>
+          |
+          <li>
+            <Link className="hover:text-slate-400" href="/trimning">
+              Pälsvård
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
 
@@ -60,59 +90,91 @@ export default function RootLayout({
   return (
     <html lang="sv">
       <body
-        className={`${inter.className} flex flex-col text-primary min-h-[100vh]`}
+        className={`${libreBaskerville.className} flex flex-col text-primary min-h-[100vh]`}
       >
         <header
           className="
-          flex justify-between items-center
+          flex
+          flex-col
+          justify-between
+          items-center
           p-4
-          lg:py-8 lg:px-20"
+          lg:py-4
+          lg:px-20
+          shadow-lg
+          "
         >
-          <h1 className="text-xl font-bold lg:text-4xl">
-            <Link href="/">Kennel Bullworks</Link>
-          </h1>
+          <div>
+            <h1
+              className="
+              font-bold
 
-          <ul className="flex gap-4 md:flex-row">
-            <li className="md:mr-auto">
-              <a
-                target="_blank"
-                href="https://www.instagram.com/bullworkscockers"
-                className="flex gap-2"
-              >
-                <Image
-                  src="/instagram.svg"
-                  alt="Instagram"
-                  height={24}
-                  width={24}
-                />
-              </a>
-            </li>
-            <li className="md:mr-auto">
-              <a
-                target="_blank"
-                href="https://www.facebook.com/kennelbullworks"
-                className="flex gap-2"
-              >
-                <Image
-                  src="/facebook.svg"
-                  alt="Facebook"
-                  height={24}
-                  width={24}
-                />
-              </a>
-            </li>
-          </ul>
+              text-xl
+              lg:text-6xl
+              "
+            >
+              <Link href="/">
+                <span className="text-xs italic">KENNEL</span> <br />
+                <span className="">BULLWORKS</span>
+              </Link>
+            </h1>
+            <div
+              className="
+                h-1
+
+                bg-brown-400
+
+                w-full
+                "
+            />
+          </div>
+          <div
+            className="
+            "
+          >
+            <div className="mt-6">
+              <DesktopMenu />
+              <MobileMenu />
+            </div>
+          </div>
         </header>
-        <main className="flex h-auto flex-col items-center justify-between">
+        <main className="mb-auto flex h-auto flex-col items-center justify-between">
           {children}
           <Analytics />
         </main>
-        <footer className="flex flex-col gap-3 h-[124px] bg-brown-400 pt-8 md:gap-6 md:pt-16 md:pb-8 md:px-28 md:h-[188px]">
-          <h4 className="text-center">Skurup, Skåne</h4>
-          <div className="min-h-[1px] w-full bg-primary" />
-          <p className="text-center text-xs font-thin">
-            Designed with ♥ by Madeleine
-          </p>
+        <footer
+          className="
+          bg-brown-400
+
+          flex
+          py-2
+          justify-center
+
+          "
+        >
+          <div
+            className="
+            flex
+            items-center
+
+            md:gap-4
+            md:flex-row
+
+            flex-col
+            "
+          >
+            <Image
+              src={SKKUppfodare}
+              height={128}
+              alt="Svenska kennelklubben uppfödare"
+            />
+            <Image src={Cockerklubben} height={128} alt="Cockerklubben" />
+            <Image
+              src={PurinaProPlan}
+              height={128}
+              alt="Purina Pro Plan hundfoder"
+            />
+          </div>
         </footer>
       </body>
     </html>
