@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import Parapgraph from '@/components/Typography/Paragraph';
-import PuppiesRunning from 'public/bianca_valpar_snabba.jpeg';
 
 export default function Valpar() {
   return (
@@ -12,7 +11,6 @@ export default function Valpar() {
       flex
       flex-col
       lg:px-32
-
       gap-4
       md:gap-8"
     >
@@ -24,12 +22,13 @@ export default function Valpar() {
         flex
 
         flex-col
+        items-center
         md:flex-row
 
         md:gap-20
         "
       >
-        <div className="flex flex-col gap-1 md:w-1/2">
+        <div className="w-full flex flex-col gap-1 md:w-1/2">
           <Parapgraph>
             När man köper valp från oss lägger vi stor vikt vid att hitta rätt
             hem för varje individ. Vi samlar in intresse och lär känna de
@@ -58,23 +57,26 @@ export default function Valpar() {
             <li>Registrerade i Svenska kennelklubben</li>
             <li>Dolda felförsäkrad</li>
           </ul>
+
         </div>
+
         <div
           className="
           relative
           rounded-[inherit]
           overflow-hidden
-
-          w-96
+          w-full
           h-96
-
+          md:aspect-square
+          md:w-1/2
           "
         >
           <Image
             src={'/bianca_valpar_snabba.jpeg'}
             alt="Cocker spaniel valpar"
             fill
-            className="object-cover"
+            className=" object-cover"
+
           />
         </div>
       </div>

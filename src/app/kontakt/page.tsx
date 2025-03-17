@@ -1,7 +1,5 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
-import Alexander from '/alex_bea_flora.jpeg';
-import Filippa from 'public/filippa_bibbi_bianca_1.jpeg';
 
 import Parapgraph from '@/components/Typography/Paragraph';
 
@@ -108,7 +106,7 @@ function ImageSize({ children }: { children: React.ReactNode }) {
           rounded-[inherit]
           overflow-hidden
 
-          w-96
+          w-full
           h-80
 
 
