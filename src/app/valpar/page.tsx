@@ -12,7 +12,9 @@ export default function Valpar() {
       flex-col
       lg:px-32
       gap-4
+      lg:w-4/6
       md:gap-8"
+
     >
       <h2 className="text-xl font-bold lg:text-4xl">
         Köpa valp av oss / Buy puppy from us
@@ -23,12 +25,12 @@ export default function Valpar() {
 
         flex-col
         items-center
-        md:flex-row
+        xl:flex-row
 
-        md:gap-20
+        xl:gap-20
         "
       >
-        <div className="w-full flex flex-col gap-1 md:w-1/2">
+        <div className=" lg:min-w-[450px] w-full flex flex-col gap-1 md:w-3/3">
           <Parapgraph>
             När man köper valp från oss lägger vi stor vikt vid att hitta rätt
             hem för varje individ. Vi samlar in intresse och lär känna de
@@ -66,16 +68,17 @@ export default function Valpar() {
           rounded-[inherit]
           overflow-hidden
           w-full
-          h-96
-          md:aspect-square
-          md:w-1/2
+          aspect-square
+lg:min-w-[450px]
+          lg:max-w-[644px]
+
           "
         >
           <Image
             src={'/bianca_valpar_snabba.jpeg'}
             alt="Cocker spaniel valpar"
             fill
-            className=" object-cover"
+            className=" object-fill md:object-cover"
 
           />
         </div>
