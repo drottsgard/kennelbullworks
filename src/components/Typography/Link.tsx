@@ -5,7 +5,7 @@ type LinkProps = PropsWithChildren<{
   to: string;
 }>;
 
-function AppLink({ to, children }: LinkProps): ReactElement {
+function AppLink({ to, children }: LinkProps): ReactElement<any> {
   return (
     <Link className="font-medium underline" href={to}>
       {children}

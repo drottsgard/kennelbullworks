@@ -71,7 +71,7 @@ export default function Valpar() {
           "
         >
           <Image
-            src={PuppiesRunning}
+            src={'/bianca_valpar_snabba.jpeg'}
             alt="Cocker spaniel valpar"
             fill
             className="object-cover"

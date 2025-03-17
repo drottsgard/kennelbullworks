@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import ImageBibbi from 'public/bibbi.jpeg';
-import ImageBeaValparKorg from 'public/bea_valpar_korg.jpeg';
-import ImageAlexFilippa from 'public/alex_filippa.jpg';
+//import ImageBibbi from 'public/bibbi.jpeg';
+//import ImageBeaValparKorg from 'public/bea_valpar_korg.jpeg';
+//import ImageAlexFilippa from 'public/alex_filippa.jpg';
 
 export default function Hero() {
   return (
@@ -37,7 +37,7 @@ export default function Hero() {
         md:h-full"
       >
         <Image
-          src={ImageBibbi}
+          src={'/bibbi.jpeg'}
           fill
           alt="Our dogs, Bea, Bianca, Bali and Bibbi"
           className="md:object-contain"
@@ -45,7 +45,7 @@ export default function Hero() {
       </div>
       <div className="relative self-center w-full h-full md:w-[800px] md:h-full brightness-125">
         <Image
-          src={ImageAlexFilippa}
+          src={'/alex_filippa.jpg'}
           fill
           alt="Our dogs, Bea, Bianca, Bali and Bibbi"
           className="md:object-contain"
@@ -63,7 +63,7 @@ export default function Hero() {
         md:h-full"
       >
         <Image
-          src={ImageBeaValparKorg}
+          src={'/bea_valpar_korg.jpeg'}
           fill
           alt="Our dogs, Bea, Bianca, Bali and Bibbi"
           className="md:object-contain"

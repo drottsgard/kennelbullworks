@@ -7,9 +7,9 @@ import Link from 'next/link';
 import opImage from '../../public/opengraph-image.png';
 import MobileMenu from '@/components/MobileHeader';
 
-import PurinaProPlan from 'public/Purina_Pro_Plan.png';
-import SKKUppfodare from 'public/skk.png';
-import Cockerklubben from 'public/Cockerklubben.gif';
+//import PurinaProPlan from 'public/Purina_Pro_Plan.png';
+//import SKKUppfodare from 'public/skk.png';
+//import Cockerklubben from 'public/Cockerklubben.gif';
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -18,6 +18,7 @@ const libreBaskerville = Libre_Baskerville({
 
 export const metadata: Metadata = {
   title: 'Kennel Bullworks',
+
   openGraph: {
     url: 'https://kennelbullworks.se',
     type: 'website',
@@ -32,8 +33,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   description:
-    'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.',
+    'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.'
 };
 
 function DesktopMenu() {
@@ -164,13 +166,17 @@ export default function RootLayout({
             "
           >
             <Image
-              src={SKKUppfodare}
+              src={'/SKK_Uppfodare.png'}
               height={128}
+              width={128}
               alt="Svenska kennelklubben uppfödare"
             />
-            <Image src={Cockerklubben} height={128} alt="Cockerklubben" />
+            <Image src={'/Cockerklubben.gif'} height={128}
+              width={128}
+              alt="Cockerklubben" />
             <Image
-              src={PurinaProPlan}
+              src={'/Purina_Pro_Plan.png'}
+              width={128}
               height={128}
               alt="Purina Pro Plan hundfoder"
             />

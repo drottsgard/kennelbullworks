@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 
-import Alexander from 'public/alex_bea_flora.jpeg';
+import Alexander from '/alex_bea_flora.jpeg';
 import Filippa from 'public/filippa_bibbi_bianca_1.jpeg';
 
 import Parapgraph from '@/components/Typography/Paragraph';
@@ -56,7 +56,7 @@ export default function page() {
           "
         >
           <ImageSize>
-            <MyImage src={Alexander} alt="Alexander" />
+            <MyImage src={'/alex_bea_flora.jpeg'} alt="Alexander" />
           </ImageSize>
           <Parapgraph
             className="
@@ -82,7 +82,7 @@ export default function page() {
           "
         >
           <ImageSize>
-            <MyImage src={Filippa} alt="Filippa" />
+            <MyImage src={'/filippa_bibbi_bianca_1.jpeg'} alt="Filippa" />
           </ImageSize>
           <Parapgraph
             className="
@@ -125,7 +125,7 @@ function ImageSize({ children }: { children: React.ReactNode }) {
 }
 
 type MyImageProps = {
-  src: StaticImageData;
+  src: string;
   alt: string;
 };
 
