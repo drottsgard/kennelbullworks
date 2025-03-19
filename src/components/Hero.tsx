@@ -1,8 +1,5 @@
 import Image from 'next/image';
 
-//import ImageBibbi from 'public/bibbi.jpeg';
-//import ImageBeaValparKorg from 'public/bea_valpar_korg.jpeg';
-//import ImageAlexFilippa from 'public/alex_filippa.jpg';
 
 export default function Hero() {
   return (

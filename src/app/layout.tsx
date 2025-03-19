@@ -7,9 +7,6 @@ import Link from 'next/link';
 import opImage from '../../public/opengraph-image.png';
 import MobileMenu from '@/components/MobileHeader';
 
-//import PurinaProPlan from 'public/Purina_Pro_Plan.png';
-//import SKKUppfodare from 'public/skk.png';
-//import Cockerklubben from 'public/Cockerklubben.gif';
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -166,7 +163,7 @@ export default function RootLayout({
             "
           >
             <Image
-              src={'/SKK_Uppfodare.png'}
+              src={'/skk.png'}
               height={128}
               width={128}
               alt="Svenska kennelklubben uppfödare"
