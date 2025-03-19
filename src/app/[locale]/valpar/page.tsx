@@ -34,8 +34,6 @@ export default function Valpar() {
       >
         <div className=" lg:min-w-[450px] w-full flex flex-col gap-1 md:w-3/3">
           <Parapgraph>
-          </Parapgraph>
-          <Parapgraph>
             {t('text1')}
             <br />
             <br />
