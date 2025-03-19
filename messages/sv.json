@@ -41,6 +41,11 @@
     "puppies": "VALPAR/KÖPA HUND",
     "products": "PÄLSVÅRD"
 
+  },
+
+"LocaleSwitcher": {
+    "label": "Ändra Språk",
+    "locale": "{locale, select, sv {🇸🇪 Svenska} en {🇺🇸 Engelska} other {Unknown}}"
   }
 }
 

@@ -6,7 +6,7 @@ import './globals.css';
 import Link from 'next/link';
 import opImage from '../../../public/opengraph-image.png'
 import MobileMenu from '@/components/MobileHeader';
-
+import LocaleSwitcher from '@/components/LocaleSwitcher';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
@@ -43,7 +43,7 @@ function DesktopMenu() {
   return (
     <>
       <nav className="hidden lg:block uppercase">
-        <ul className="flex gap-8">
+        <ul className="flex gap-8 items-center">
           <li>
             <Link className="hover:text-slate-400" href="/">
               {t('home')}
@@ -80,7 +80,13 @@ function DesktopMenu() {
             </Link>
           </li>
         </ul>
+
+        <div className='absolute right-36 top-20'>
+
+          <LocaleSwitcher />
+        </div>
       </nav>
+
     </>
   );
 }
@@ -141,6 +147,7 @@ export default async function RootLayout({
                 "
               />
             </div>
+
             <div
               className="
             "
