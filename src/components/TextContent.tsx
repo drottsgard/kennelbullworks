@@ -19,10 +19,10 @@ export function TextContent({
 }: TextContentProps) {
   return (
     <>
-    <div className="text-left flex flex-col gap-2">
-      <h3 className="text-2xl font-semibold">{title}</h3>
-      {content}
-    </div>
+      <div className="text-left flex flex-col gap-2">
+        <h3 className="text-2xl font-semibold">{title}</h3>
+        {content}
+      </div>
       {children}
     </>
   );

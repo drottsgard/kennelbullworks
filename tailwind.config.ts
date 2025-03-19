@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -15,11 +15,11 @@ const config: Config = {
         'paw-pattern': "url('/paw.svg')",
       },
       colors: {
-        'brown-400': "#EAE0D5",
-        'primary': "#22333B",
+        'brown-400': '#EAE0D5',
+        primary: '#22333B',
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
