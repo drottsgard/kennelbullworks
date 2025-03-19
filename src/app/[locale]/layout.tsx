@@ -4,13 +4,13 @@ import Image from 'next/image';
 import { Libre_Baskerville } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
-import opImage from '../../public/opengraph-image.png';
+import opImage from '../../../public/opengraph-image.png'
 import MobileMenu from '@/components/MobileHeader';
 
-//import PurinaProPlan from 'public/Purina_Pro_Plan.png';
-//import SKKUppfodare from 'public/skk.png';
-//import Cockerklubben from 'public/Cockerklubben.gif';
-
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -39,43 +39,44 @@ export const metadata: Metadata = {
 };
 
 function DesktopMenu() {
+  const t = useTranslations('Links')
   return (
     <>
       <nav className="hidden lg:block uppercase">
         <ul className="flex gap-8">
           <li>
             <Link className="hover:text-slate-400" href="/">
-              Hem
+              {t('home')}
             </Link>
           </li>
           |
           <li>
             <Link className="hover:text-slate-400" href="/hundar">
-              Våra hundar
+              {t('ourDogs')}
             </Link>
           </li>
           |
           <li>
             <Link className="hover:text-slate-400" href="/om-oss">
-              Om oss
+              {t('about')}
             </Link>
           </li>
           |
           <li>
             <Link className="hover:text-slate-400" href="/kontakt">
-              Kontakt
+              {t('contact')}
             </Link>
           </li>
           |
           <li>
             <Link className="hover:text-slate-400" href="/valpar">
-              Valpar/Köpa hund
+              {t('puppies')}
             </Link>
           </li>
           |
           <li>
             <Link className="hover:text-slate-400" href="/trimning">
-              Pälsvård
+              {t('products')}
             </Link>
           </li>
         </ul>
@@ -84,18 +85,28 @@ function DesktopMenu() {
   );
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
   return (
-    <html lang="sv">
+
+    <html lang={locale}>
       <body
         className={`${libreBaskerville.className} flex flex-col text-primary min-h-[100vh]`}
       >
-        <header
-          className="
+
+        <NextIntlClientProvider>
+          <header
+            className="
           flex
           flex-col
           justify-between
@@ -105,47 +116,47 @@ export default function RootLayout({
           lg:px-20
           shadow-lg
           "
-        >
-          <div>
-            <h1
-              className="
+          >
+            <div>
+              <h1
+                className="
               font-bold
 
               text-xl
               lg:text-6xl
               "
-            >
-              <Link href="/">
-                <span className="text-xs italic">KENNEL</span> <br />
-                <span className="">BULLWORKS</span>
-              </Link>
-            </h1>
-            <div
-              className="
+              >
+                <Link href="/">
+                  <span className="text-xs italic">KENNEL</span> <br />
+                  <span className="">BULLWORKS</span>
+                </Link>
+              </h1>
+              <div
+                className="
                 h-1
 
                 bg-brown-400
 
                 w-full
                 "
-            />
-          </div>
-          <div
-            className="
-            "
-          >
-            <div className="mt-6">
-              <DesktopMenu />
-              <MobileMenu />
+              />
             </div>
-          </div>
-        </header>
-        <main className="mb-auto flex h-auto flex-col items-center justify-between">
-          {children}
-          <Analytics />
-        </main>
-        <footer
-          className="
+            <div
+              className="
+            "
+            >
+              <div className="mt-6">
+                <DesktopMenu />
+                <MobileMenu />
+              </div>
+            </div>
+          </header>
+          <main className="mb-auto flex h-auto flex-col items-center justify-between">
+            {children}
+            <Analytics />
+          </main>
+          <footer
+            className="
           bg-brown-400
 
           flex
@@ -153,9 +164,9 @@ export default function RootLayout({
           justify-center
 
           "
-        >
-          <div
-            className="
+          >
+            <div
+              className="
             flex
             items-center
 
@@ -164,24 +175,26 @@ export default function RootLayout({
 
             flex-col
             "
-          >
-            <Image
-              src={'/SKK_Uppfodare.png'}
-              height={128}
-              width={128}
-              alt="Svenska kennelklubben uppfödare"
-            />
-            <Image src={'/Cockerklubben.gif'} height={128}
-              width={128}
-              alt="Cockerklubben" />
-            <Image
-              src={'/Purina_Pro_Plan.png'}
-              width={128}
-              height={128}
-              alt="Purina Pro Plan hundfoder"
-            />
-          </div>
-        </footer>
+            >
+              <Image
+                src={'/SKK_Uppfodare.png'}
+                height={128}
+                width={128}
+                alt="Svenska kennelklubben uppfödare"
+              />
+              <Image src={'/Cockerklubben.gif'} height={128}
+                width={128}
+                alt="Cockerklubben" />
+              <Image
+                src={'/Purina_Pro_Plan.png'}
+                width={128}
+                height={128}
+                alt="Purina Pro Plan hundfoder"
+              />
+            </div>
+
+          </footer>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

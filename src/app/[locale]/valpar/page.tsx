@@ -1,8 +1,10 @@
 import Image from 'next/image';
-
+import { useTranslations } from 'next-intl';
 import Parapgraph from '@/components/Typography/Paragraph';
 
 export default function Valpar() {
+  const t = useTranslations('Puppies')
+  const puppyInfo = t.raw('puppyInfo');
   return (
     <div
       className="
@@ -17,7 +19,7 @@ export default function Valpar() {
 
     >
       <h2 className="text-xl font-bold lg:text-4xl">
-        Köpa valp av oss / Buy puppy from us
+        {t('title')}
       </h2>
       <div
         className="
@@ -32,18 +34,12 @@ export default function Valpar() {
       >
         <div className=" lg:min-w-[450px] w-full flex flex-col gap-1 md:w-3/3">
           <Parapgraph>
-            När man köper valp från oss lägger vi stor vikt vid att hitta rätt
-            hem för varje individ. Vi samlar in intresse och lär känna de
-            potentiella valpköparna innan vi bestämmer vilka som får möjlighet
-            att köpa valp. Vi prioriterar de som bor i närheten, då vi gärna
-            vill ha en god relation även efter att valpen flyttat.
+          </Parapgraph>
+          <Parapgraph>
+            {t('text1')}
             <br />
             <br />
-            Valparna växer upp i hemmiljö och socialiseras noggrant innan
-            leverans vid tidigast åtta veckors ålder. Vi är inte bara med från
-            starten, utan kommer att finnas till hands med support och råd under
-            lång tid framöver. Alla valpar får också med sig ett valppaket från
-            Purina Pro Plan och vårt informativa valphäfte.
+            {t('text2')}
           </Parapgraph>
           <ul
             className="
@@ -53,11 +49,9 @@ export default function Valpar() {
             italic
             "
           >
-            <li>Fullständigt veterinärbesiktade och chipmärkt</li>
-            <li>Vaccinerade</li>
-            <li>Avmaskad</li>
-            <li>Registrerade i Svenska kennelklubben</li>
-            <li>Dolda felförsäkrad</li>
+            {puppyInfo.map((item: string, index: number) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
         </div>

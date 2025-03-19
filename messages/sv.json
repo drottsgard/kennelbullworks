@@ -1,0 +1,46 @@
+{
+  "Puppies": {
+    "title": "Köp våra hundar",
+    "text1": "När man köper valp från oss lägger vi stor vikt vid att hitta rätt hem för varje individ. Vi samlar in intresse och lär känna de potentiella valpköparna innan vi bestämmer vilka som får möjlighet att köpa valp. Vi prioriterar de som bor i närheten, då vi gärna vill ha en god relation även efter att valpen flyttat.",
+    "text2": "Valparna växer upp i hemmiljö och socialiseras noggrant innan leverans vid tidigast åtta veckors ålder. Vi är inte bara med från starten, utan kommer att finnas till hands med support och råd under lång tid framöver. Alla valpar får också med sig ett valppaket från Purina Pro Plan och vårt informativa valphäfte.",
+ "puppyInfo": [
+    "Fullständigt veterinärbesiktade och chipmärkt",
+    "Vaccinerade",
+    "Avmaskad",
+    "Registrerade i Svenska kennelklubben",
+    "Dolda felförsäkrad"
+  ]
+  },
+
+  "HomePage": {
+    "welcome": "Välkommen",
+    "welcomeMessage": "till Bullworks uppfödning av Engelsk Cocker Spaniel.",
+    "socialMedia": "Följ oss på sociala medier för att hålla dig uppdaterad kring senaste nytt.",
+    "news": "Senaste nytt"
+  },
+
+  "Construction": {
+    "constructionMessage": "Under uppbyggnad"
+  },
+
+    "Our Dogs": {
+  "title": "Våra hundar",
+    "titleMessage": "Klicka på hunden för att komma till dess sida."
+},
+
+  "Contact": {
+    "title": "Kontakt",
+    "contactMessage1": "Välkommen att kontakta oss. Vår gemensamma mail är kennelbullworks@hotmail.com",
+    "contactMessage2": "Ni når oss också via våra sociala medier."
+  },
+  "Links": {
+    "home": "HEM",
+    "ourDogs": "VÅRA HUNDAR",
+    "about":"OM OSS",
+    "contact":"KONTAKT",
+    "puppies": "VALPAR/KÖPA HUND",
+    "products": "PÄLSVÅRD"
+
+  }
+}
+

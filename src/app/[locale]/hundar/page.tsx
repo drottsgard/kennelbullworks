@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { useTranslations } from 'next-intl';
 import { DogInformation, DOG_OWNER, DOGS } from '@/dogs';
 
 function Dog({
@@ -55,6 +55,7 @@ function KennelDogs() {
     ($) => $.category === DOG_OWNER.Filippa,
   );
 
+  const t = useTranslations('Our Dogs')
   return (
     <DogsSection
       leftDogs={leftDogs}
@@ -62,12 +63,10 @@ function KennelDogs() {
       topSlot={
         <div className="mb-3 lg:mb-8">
           <h2 className="text-xl font-bold lg:text-4xl">
-            Våra hundar / Our dogs
+            {t('title')}
           </h2>
           <span className="italic">
-            Klicka på hunden för att komma till dess sida.
-            <br />
-            Click on the dog to go to its page.
+            {t('titleMessage')}
           </span>
         </div>
       }
