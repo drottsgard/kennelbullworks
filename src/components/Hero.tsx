@@ -21,7 +21,7 @@ export default function Hero() {
           md:justify-evenly
           md:gap-0
           md:pl-28
-          md:pr-0
+          md:pr-28
         "
       style={{ height: '534px' }}
     >
@@ -33,7 +33,7 @@ export default function Hero() {
         h-full
         md:w-[800px]
         hidden
-        md:block
+        lg:block
         md:h-full"
       >
         <Image
@@ -48,7 +48,7 @@ export default function Hero() {
           src={'/alex_filippa.jpg'}
           fill
           alt="Our dogs, Bea, Bianca, Bali and Bibbi"
-          className="md:object-contain"
+          className="object-contain"
         />
       </div>
       <div
@@ -59,7 +59,7 @@ export default function Hero() {
         h-full
         md:w-[800px]
         hidden
-        md:block
+        lg:block
         md:h-full"
       >
         <Image
