@@ -45,7 +45,9 @@
 
 "LocaleSwitcher": {
     "label": "Ändra Språk",
-    "locale": "{locale, select, sv {🇸🇪 Svenska} en {🇺🇸 Engelska} other {Unknown}}"
+    "desktopLocale": "{locale, select, sv { Svenska} en { Engelska} other {Unknown}}",
+
+    "mobileLocale": "{locale, select, sv {Svenska } en {Engelska } other {Unknown}}"
   }
 }
 

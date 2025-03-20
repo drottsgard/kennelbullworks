@@ -1,10 +1,9 @@
 'use client';
-
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import LocaleSwitcher from './LocaleSwitcher';
-
+import { MobileLocaleSwitcher } from './LocaleSwitcher';
 function Hamburger(props: { onClick: () => void }) {
   return (
     <button
@@ -30,42 +29,40 @@ function MobileMenuContainer({ onLinkClick }: MobileMenuProps) {
   const handleClick = () => {
     onLinkClick();
   };
+  const t = useTranslations('Links')
 
   return (
     <>
-      <div className='absolute right-0 top-10'>
-        <LocaleSwitcher />
-      </div>
       <nav className="top-[88px] left-0 right-0 pt-4 pb-8 bg-white absolute z-50">
         <ul className="flex flex-col gap-2 items-center">
           <li>
             <Link href="/" onClick={handleClick}>
-              Hem
+              {t('home')}
             </Link>
           </li>
           <li>
             <Link href="/hundar" onClick={handleClick}>
-              Våra hundar
+              {t('ourDogs')}
             </Link>
           </li>
           <li>
             <Link href="/om-oss" onClick={handleClick}>
-              Om oss
+              {t('about')}
             </Link>
           </li>
           <li>
             <Link href="/kontakt" onClick={handleClick}>
-              Kontakt
+              {t('contact')}
             </Link>
           </li>
           <li>
             <Link href="/valpar" onClick={handleClick}>
-              Valpar/Köpa hund
+              {t('puppies')}
             </Link>
           </li>
           <li>
             <Link href="/trimning" onClick={handleClick}>
-              Pälsvård
+              {t('products')}
             </Link>
           </li>
           <div
@@ -102,6 +99,9 @@ function MobileMenuContainer({ onLinkClick }: MobileMenuProps) {
               Kennel Bullworks
             </a>
           </li>
+          <li>
+            <MobileLocaleSwitcher />
+          </li>
         </ul>
       </nav>
     </>
@@ -131,9 +131,15 @@ export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="md:hidden">
+
+    <div className="lg:hidden">
+
       <Hamburger onClick={() => setIsOpen(!isOpen)} />
       {isOpen && <MobileMenuContainer onLinkClick={() => setIsOpen(false)} />}
     </div>
   );
 }
+
+//<div className='absolute right-10 top-10'>
+//  <MobileLocaleSwitcher />
+//</div>
