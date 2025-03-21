@@ -209,9 +209,7 @@ export default async function RootLayout({
           </footer>
         </NextIntlClientProvider>
 
-           
-          </div>
-        </footer>
+
 
       </body>
     </html>
