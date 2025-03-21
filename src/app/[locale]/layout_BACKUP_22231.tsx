@@ -6,16 +6,16 @@ import './globals.css';
 import Link from 'next/link';
 import opImage from '../../../public/opengraph-image.png'
 import MobileMenu from '@/components/MobileHeader';
-
+<<<<<<< HEAD:src/app/[locale]/layout.tsx
 import { DesktopLocaleSwitcher } from '@/components/LocaleSwitcher';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+=======
 
 
-
-
+>>>>>>> main:src/app/layout.tsx
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -187,7 +187,7 @@ export default async function RootLayout({
 
             flex-col
             "
-
+<<<<<<< HEAD:src/app/[locale]/layout.tsx
             >
               <Image
                 src={'/SKK_Uppfodare.png'}
@@ -208,11 +208,26 @@ export default async function RootLayout({
 
           </footer>
         </NextIntlClientProvider>
-
-           
+=======
+          >
+            <Image
+              src={'/skk.png'}
+              height={128}
+              width={128}
+              alt="Svenska kennelklubben uppfödare"
+            />
+            <Image src={'/Cockerklubben.gif'} height={128}
+              width={128}
+              alt="Cockerklubben" />
+            <Image
+              src={'/Purina_Pro_Plan.png'}
+              width={128}
+              height={128}
+              alt="Purina Pro Plan hundfoder"
+            />
           </div>
         </footer>
-
+>>>>>>> main:src/app/layout.tsx
       </body>
     </html>
   );

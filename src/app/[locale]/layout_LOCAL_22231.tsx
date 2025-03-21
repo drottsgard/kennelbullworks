@@ -6,16 +6,11 @@ import './globals.css';
 import Link from 'next/link';
 import opImage from '../../../public/opengraph-image.png'
 import MobileMenu from '@/components/MobileHeader';
-
 import { DesktopLocaleSwitcher } from '@/components/LocaleSwitcher';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-
-
-
-
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -187,7 +182,6 @@ export default async function RootLayout({
 
             flex-col
             "
-
             >
               <Image
                 src={'/SKK_Uppfodare.png'}
@@ -208,11 +202,6 @@ export default async function RootLayout({
 
           </footer>
         </NextIntlClientProvider>
-
-           
-          </div>
-        </footer>
-
       </body>
     </html>
   );

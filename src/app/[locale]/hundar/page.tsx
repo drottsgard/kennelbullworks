@@ -96,7 +96,7 @@ function OtherDogs() {
 type MyImageProps = {
   src: string;
   alt: string;
-}
+};
 
 function MyImage({ src, alt }: MyImageProps) {
   return <Image src={src} alt={alt} className="object-fill" fill />;
