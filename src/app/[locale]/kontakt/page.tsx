@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import Parapgraph from '@/components/Typography/Paragraph';
 
-export default function page() {
+export default function Page() {
   const t = useTranslations('Contact')
   return (
     <div
