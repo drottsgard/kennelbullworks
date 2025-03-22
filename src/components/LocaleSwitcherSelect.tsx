@@ -15,7 +15,7 @@ type Props = {
 export default function LocaleSwitcherSelect({
   children,
   defaultValue,
-  label
+  label,
 }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -30,7 +30,7 @@ export default function LocaleSwitcherSelect({
         // are used in combination with a given `pathname`. Since the two will
         // always match for the current route, we can skip runtime checks.
         { pathname, params },
-        { locale: nextLocale }
+        { locale: nextLocale },
       );
     });
   }
@@ -39,7 +39,7 @@ export default function LocaleSwitcherSelect({
     <label
       className={clsx(
         'relative text-gray-950 top-3',
-        isPending && 'transition-opacity [&:disabled]:opacity-30'
+        isPending && 'transition-opacity [&:disabled]:opacity-30',
       )}
     >
       <p className="sr-only">{label}</p>
@@ -51,7 +51,9 @@ export default function LocaleSwitcherSelect({
       >
         {children}
       </select>
-      <span className="pointer-events-none absolute right-3 bottom-[1px]">⌄</span>
+      <span className="pointer-events-none absolute right-3 bottom-[1px]">
+        ⌄
+      </span>
     </label>
   );
 }
