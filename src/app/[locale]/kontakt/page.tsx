@@ -1,11 +1,10 @@
-import Image, { StaticImageData } from 'next/image';
-
-import Alexander from 'public/alex_bea_flora.jpeg';
-import Filippa from 'public/filippa_bibbi_bianca_1.jpeg';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import Parapgraph from '@/components/Typography/Paragraph';
 
-export default function page() {
+export default function Page() {
+  const t = useTranslations('Contact');
   return (
     <div
       className="
@@ -19,18 +18,12 @@ export default function page() {
       md:gap-8"
     >
       <div>
-        <h2 className="text-xl font-bold lg:text-4xl">Kontakt / Contact</h2>
+        <h2 className="text-xl font-bold lg:text-4xl">{t('title')}</h2>
         <div className="flex flex-col gap-1">
           <Parapgraph className="italic">
-            Välkommen att kontakta oss. Vår gemensamma mail är
-            kennelbullworks@hotmail.com
+            {t('contactMessage1')}
             <br />
-            Ni når oss också via våra sociala medier.
-          </Parapgraph>
-          <Parapgraph className="italic">
-            Welcome to contact us. Our email is kennelbullworks@hotmail.com.
-            <br />
-            You can also contact us through our social media.
+            {t('contactMessage2')}
           </Parapgraph>
         </div>
       </div>
@@ -56,7 +49,7 @@ export default function page() {
           "
         >
           <ImageSize>
-            <MyImage src={Alexander} alt="Alexander" />
+            <MyImage src={'/alex_bea_flora.jpeg'} alt="Alexander" />
           </ImageSize>
           <Parapgraph
             className="
@@ -82,7 +75,7 @@ export default function page() {
           "
         >
           <ImageSize>
-            <MyImage src={Filippa} alt="Filippa" />
+            <MyImage src={'/filippa_bibbi_bianca_1.jpeg'} alt="Filippa" />
           </ImageSize>
           <Parapgraph
             className="
@@ -108,7 +101,7 @@ function ImageSize({ children }: { children: React.ReactNode }) {
           rounded-[inherit]
           overflow-hidden
 
-          w-96
+          w-full
           h-80
 
 
@@ -125,7 +118,7 @@ function ImageSize({ children }: { children: React.ReactNode }) {
 }
 
 type MyImageProps = {
-  src: StaticImageData;
+  src: string;
   alt: string;
 };
 
