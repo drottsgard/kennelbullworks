@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Libre_Baskerville } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
-import opImage from '../../../public/opengraph-image.png'
+import opImage from '../../../public/opengraph-image.png';
 import MobileMenu from '@/components/MobileHeader';
 
 import { DesktopLocaleSwitcher } from '@/components/LocaleSwitcher';
@@ -12,9 +12,6 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-
-
-
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -40,11 +37,11 @@ export const metadata: Metadata = {
   },
 
   description:
-    'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.'
+    'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.',
 };
 
 function DesktopMenu() {
-  const t = useTranslations('Links')
+  const t = useTranslations('Links');
   return (
     <>
       <nav className="hidden lg:block uppercase">
@@ -86,19 +83,17 @@ function DesktopMenu() {
           </li>
         </ul>
 
-        <div className='absolute right-36 top-20'>
-
+        <div className="absolute right-36 top-20">
           <DesktopLocaleSwitcher />
         </div>
       </nav>
-
     </>
   );
 }
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -109,12 +104,10 @@ export default async function RootLayout({
     notFound();
   }
   return (
-
     <html lang={locale}>
       <body
         className={`${libreBaskerville.className} flex flex-col text-primary min-h-[100vh]`}
       >
-
         <NextIntlClientProvider>
           <header
             className="
@@ -187,7 +180,6 @@ export default async function RootLayout({
 
             flex-col
             "
-
             >
               <Image
                 src={'/SKK_Uppfodare.png'}
@@ -195,9 +187,12 @@ export default async function RootLayout({
                 width={128}
                 alt="Svenska kennelklubben uppfödare"
               />
-              <Image src={'/Cockerklubben.gif'} height={128}
+              <Image
+                src={'/Cockerklubben.gif'}
+                height={128}
                 width={128}
-                alt="Cockerklubben" />
+                alt="Cockerklubben"
+              />
               <Image
                 src={'/Purina_Pro_Plan.png'}
                 width={128}
@@ -205,12 +200,8 @@ export default async function RootLayout({
                 alt="Purina Pro Plan hundfoder"
               />
             </div>
-
           </footer>
         </NextIntlClientProvider>
-
-
-
       </body>
     </html>
   );

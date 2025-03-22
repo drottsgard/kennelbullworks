@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Image from 'next/image';
 
 import { useTranslations } from 'next-intl';
@@ -7,8 +7,7 @@ import Hero from '@/components/Hero';
 import Heading3 from '@/components/Typography/Heading';
 import Parapgraph from '@/components/Typography/Paragraph';
 export default function Home() {
-
-  const t = useTranslations('HomePage')
+  const t = useTranslations('HomePage');
   return (
     <div className="flex flex-col gap-8 w-full">
       <Hero />
@@ -30,9 +29,7 @@ export default function Home() {
         />
 
         <Heading3 className="text-1xl">{t('news')}</Heading3>
-        <Parapgraph className="md:max-w-[800px]">
-          {t('socialMedia')}
-        </Parapgraph>
+        <Parapgraph className="md:max-w-[800px]">{t('socialMedia')}</Parapgraph>
         <ul
           className="
           md:flex

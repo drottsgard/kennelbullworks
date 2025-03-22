@@ -29,7 +29,7 @@ function MobileMenuContainer({ onLinkClick }: MobileMenuProps) {
   const handleClick = () => {
     onLinkClick();
   };
-  const t = useTranslations('Links')
+  const t = useTranslations('Links');
 
   return (
     <>
@@ -95,7 +95,12 @@ function MobileMenuContainer({ onLinkClick }: MobileMenuProps) {
               href="https://www.facebook.com/kennelbullworks"
               className="flex gap-2"
             >
-              <Image src="/facebook.svg" alt="Facebook" height={24} width={24} />
+              <Image
+                src="/facebook.svg"
+                alt="Facebook"
+                height={24}
+                width={24}
+              />
               Kennel Bullworks
             </a>
           </li>
@@ -131,9 +136,7 @@ export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-
     <div className="lg:hidden">
-
       <Hamburger onClick={() => setIsOpen(!isOpen)} />
       {isOpen && <MobileMenuContainer onLinkClick={() => setIsOpen(false)} />}
     </div>

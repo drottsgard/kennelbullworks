@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import Parapgraph from '@/components/Typography/Paragraph';
 
 export default function Valpar() {
-  const t = useTranslations('Puppies')
+  const t = useTranslations('Puppies');
   const puppyInfo = t.raw('puppyInfo');
   return (
     <div
@@ -16,11 +16,8 @@ export default function Valpar() {
       gap-4
       lg:w-4/6
       md:gap-8"
-
     >
-      <h2 className="text-xl font-bold lg:text-4xl">
-        {t('title')}
-      </h2>
+      <h2 className="text-xl font-bold lg:text-4xl">{t('title')}</h2>
       <div
         className="
         flex
@@ -51,7 +48,6 @@ export default function Valpar() {
               <li key={index}>{item}</li>
             ))}
           </ul>
-
         </div>
 
         <div
@@ -71,7 +67,6 @@ lg:min-w-[450px]
             alt="Cocker spaniel valpar"
             fill
             className=" object-fill md:object-cover"
-
           />
         </div>
       </div>

@@ -55,19 +55,15 @@ function KennelDogs() {
     ($) => $.category === DOG_OWNER.Filippa,
   );
 
-  const t = useTranslations('Our Dogs')
+  const t = useTranslations('Our Dogs');
   return (
     <DogsSection
       leftDogs={leftDogs}
       rightDogs={rightDogs}
       topSlot={
         <div className="mb-3 lg:mb-8">
-          <h2 className="text-xl font-bold lg:text-4xl">
-            {t('title')}
-          </h2>
-          <span className="italic">
-            {t('titleMessage')}
-          </span>
+          <h2 className="text-xl font-bold lg:text-4xl">{t('title')}</h2>
+          <span className="italic">{t('titleMessage')}</span>
         </div>
       }
     />
