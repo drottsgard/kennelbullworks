@@ -12,7 +12,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'paw-pattern': "url('/paw.svg')",
+        'paw-pattern': "url('/paw_bg.svg')",
       },
       colors: {
         'brown-400': '#EAE0D5',

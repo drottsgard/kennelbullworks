@@ -12,6 +12,13 @@
     ]
   },
 
+  "About": {
+    "title": "Om oss",
+    "text1": "Bullworks är en småskalig kennel i södra Skåne. Vi är två syskon som i princip är uppvuxna i valplådan och en ärvd passion för hundar. Med föräldrar som föder upp hundar under Kennel Moonstruck och Kennel Workable har hundvärlden alltid funnits runt oss, men det var inte självklart att det skulle bli vår väg. För några år sedan började hundarna ta en allt större plats i våra liv och nu är de vår största passion.",
+    "text2": "Vi föder upp både enfärgade och brokiga Cocker Spaniels, där Alexander har brokigt och Filippa enfärgat. Vårt mål är att föda upp friska, sociala och välbyggda engelska cocker spaniels, med fokus på både hälsa och temperament. För oss handlar uppfödning om kärlek till rasen och att bevara rasens fantastiska egenskaper genom noggrant planerade kombinationer. 2023 startade vi Kennel Bullworks.",
+    "text3": "Kennelnamnet har vi ärvt av vår mamma Christina Drottsgård och Karin Brostam Berglund, som 1992 skaffade namnet med tanken att föda upp Clumber Spaniel tillsammans. Även om det aldrig blev några valpar under namnet då, bär vi det nu med stolthet. "
+  },
+
   "HomePage": {
     "welcome": "Välkommen",
     "welcomeMessage": "till Bullworks uppfödning av Engelsk Cocker Spaniel.",
