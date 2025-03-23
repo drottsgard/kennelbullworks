@@ -142,7 +142,3 @@ export default function MobileMenu() {
     </div>
   );
 }
-
-//<div className='absolute right-10 top-10'>
-//  <MobileLocaleSwitcher />
-//</div>
