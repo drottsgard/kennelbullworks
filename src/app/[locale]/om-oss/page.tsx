@@ -1,8 +1,11 @@
+import { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import AlexanderBeaFlora from './alex_bea_flora_2.jpeg';
-import { ReactNode } from 'react';
+import FilippaBibbi from './filippa_bibbi.jpg';
+import BaliBullworks from './bali_bullworks.jpeg';
+import Parapgraph from '@/components/Typography/Paragraph';
 
 export default function About() {
   const t = useTranslations('About');
@@ -15,54 +18,48 @@ export default function About() {
       flex-col
 
       gap-4
+
+      container
       "
     >
       <PageHeading>{t('title')}</PageHeading>
-      <AlexanderBeaFloraImage />
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis
-        urna rutrum, finibus dolor vel, facilisis nibh. Maecenas posuere urna
-        vitae condimentum viverra. Donec egestas iaculis libero scelerisque
-        vestibulum. In a ante blandit, tincidunt tortor vel, tristique nulla.
-        Fusce placerat erat ornare aliquam rhoncus. In hac habitasse platea
-        dictumst. Donec sit amet lectus nibh. Vestibulum sapien tortor, dictum
-        at enim quis, vestibulum facilisis lacus. In mi dolor, lacinia lobortis
-        tincidunt ut, rutrum quis erat. Praesent eros ligula, vehicula at
-        rhoncus rhoncus, ultrices et augue. Nulla eu nisi id massa iaculis
-        fermentum tempor ac nibh. Suspendisse sollicitudin vitae nibh a pretium.
-        Sed feugiat finibus velit, quis lobortis est sodales vel. Proin molestie
-        risus mi, sit amet venenatis lorem tincidunt eu. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Maecenas non leo vitae dui rhoncus
-        bibendum. Suspendisse ac nulla vel elit iaculis finibus. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus. Nam tempor scelerisque
-        velit eget lobortis. Quisque eros arcu, auctor eget dui elementum,
-        facilisis aliquam velit.
-      </span>
-      <PawLine />
-      <PageHeadingSub>Alexander Drottsgård</PageHeadingSub>
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis
-        urna rutrum, finibus dolor vel, facilisis nibh. Maecenas posuere urna
-        vitae condimentum viverra. Donec egestas iaculis libero scelerisque
-        vestibulum. In a ante blandit, tincidunt tortor vel, tristique nulla.
-        Fusce placerat erat ornare aliquam rhoncus. In hac habitasse platea
-        dictumst. Donec sit amet lectus nibh. Vestibulum sapien tortor, dictum
-        at enim quis, vestibulum facilisis lacus. In mi dolor, lacinia lobortis
-        tincidunt ut, rutrum quis erat. Praesent eros ligula, vehicula at
-        rhoncus rhoncus, ultrices et augue. Nulla eu nisi id massa iaculis
-      </span>
-      <PawLine />
-      <PageHeadingSub>Filippa Drottsgård</PageHeadingSub>
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis
-        urna rutrum, finibus dolor vel, facilisis nibh. Maecenas posuere urna
-        vitae condimentum viverra. Donec egestas iaculis libero scelerisque
-        vestibulum. In a ante blandit, tincidunt tortor vel, tristique nulla.
-        Fusce placerat erat ornare aliquam rhoncus. In hac habitasse platea
-        dictumst. Donec sit amet lectus nibh. Vestibulum sapien tortor, dictum
-        at enim quis, vestibulum facilisis lacus. In mi dolor, lacinia lobortis
-        tincidunt ut, rutrum quis erat. Praesent eros ligula, vehicula at
-      </span>
+      <div
+        className="
+        sm:flex-row
+        gap-4
+        lg:gap-52
+        flex
+        flex-col-reverse
+        "
+      >
+        <div className="flex flex-col gap-4 sm:w-1/2 sm:self-center">
+          <Parapgraph>{t('text1')}</Parapgraph>
+
+          <Parapgraph>{t('text2')}</Parapgraph>
+
+          <Parapgraph>{t('text3')}</Parapgraph>
+        </div>
+        <div className="sm:w-1/4">
+          <BaliBullworksImage />
+        </div>
+      </div>
+      <div
+        className="
+        flex
+        flex-col-reverse
+        gap-8
+
+        sm:flex-row
+        sm:gap-12
+        "
+      >
+        <ImageSize>
+          <MyImage src={AlexanderBeaFlora} alt="Alexander med Bea och Flora" />
+        </ImageSize>
+        <ImageSize>
+          <MyImage src={FilippaBibbi} alt="Filippa med Bibbi" />
+        </ImageSize>
+      </div>
     </div>
   );
 }
@@ -75,14 +72,42 @@ function PageHeading(props: PageHeadingProps) {
   return <h2 className="text-xl font-bold lg:text-4xl">{props.children}</h2>;
 }
 
-function PageHeadingSub(props: PageHeadingProps) {
-  return <h3 className="text-l font-bold lg:text-2xl">{props.children}</h3>;
+function BaliBullworksImage() {
+  return <Image src={BaliBullworks} alt="Bali med Bullworks kennel-skylt" />;
 }
 
-function PawLine() {
-  return <div className=" bg-repeat-space h-[46px] w-full bg-paw-pattern" />;
+function ImageSize({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      className="
+          relative
+          overflow-hidden
+
+          w-full
+
+          md:w-72
+          md:h-80
+
+          lg:w-80
+          lg:h-96
+          "
+    >
+      {children}
+    </div>
+  );
 }
 
-function AlexanderBeaFloraImage() {
-  return <Image src={AlexanderBeaFlora} alt="Alexander med Bea och Flora" />;
+type MyImageProps = {
+  src: StaticImageData;
+  alt: string;
+};
+
+function MyImage(props: MyImageProps) {
+  return (
+    <Image
+      src={props.src}
+      alt={props.alt}
+      className="sm:object-cover object-contain"
+    />
+  );
 }
