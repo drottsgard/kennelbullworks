@@ -182,7 +182,7 @@ export default async function RootLayout({
             "
             >
               <Image
-                src={'/SKK_Uppfodare.png'}
+                src={'/skk.png'}
                 height={128}
                 width={128}
                 alt="Svenska kennelklubben uppfödare"
