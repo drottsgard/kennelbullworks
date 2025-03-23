@@ -1,7 +1,7 @@
 {
   "Puppies": {
-    "title": "Buy our dogs",
-    "text1": "When you buy a puppy from us, we place great importance on finding the right home for each individual. We gather interest and get to know potential puppy buyers before deciding who will have the opportunity to purchase a puppy. We prioritize those who live nearby, as we want to maintain a good relationship even after the puppy has moved to its new home.",
+    "title": "Buy puppy from us",
+    "text1": "When you buy a puppy from us, we place great importance on finding the right home for each individual. We gather interest and get to know potential buyers before deciding who will have the opportunity to purchase a puppy. We prioritize those who live nearby, as we want to maintain a good relationship even after the puppy has moved to its new home.",
     "text2": "The puppies grow up in a home environment and are carefully socialized before being delivered at the earliest at eight weeks of age. We are not just there at the beginning—we will be available with support and advice for a long time to come. Each puppy also receives a puppy package from Purina Pro Plan and our informative puppy handbook.",
     "puppyInfo": [
       "Fully examined by a veterinarian and microchipped",
@@ -37,7 +37,7 @@
     "about": "ABOUT",
     "contact": "CONTACT",
     "puppies": "PUPPIES/BUY DOG",
-    "products": "PRODUCTS"
+    "grooming": "GROOMING"
   },
 
   "LocaleSwitcher": {

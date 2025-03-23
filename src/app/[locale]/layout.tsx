@@ -78,7 +78,7 @@ function DesktopMenu() {
           |
           <li>
             <Link className="hover:text-slate-400" href="/trimning">
-              {t('products')}
+              {t('grooming')}
             </Link>
           </li>
         </ul>

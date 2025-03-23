@@ -62,7 +62,7 @@ function MobileMenuContainer({ onLinkClick }: MobileMenuProps) {
           </li>
           <li>
             <Link href="/trimning" onClick={handleClick}>
-              {t('products')}
+              {t('grooming')}
             </Link>
           </li>
           <div
