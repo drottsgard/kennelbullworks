@@ -42,7 +42,6 @@
 
   "LocaleSwitcher": {
     "label": "Change language",
-    "desktopLocale": "{locale, select, sv { Swedish} en { English} other {Unknown}}",
-    "mobileLocale": "{locale, select, sv {Swedish } en {English } other {Unknown}}"
+    "locales": "{locale, select, sv { Swedish} en { English} other {Unknown}}"
   }
 }

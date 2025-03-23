@@ -1,17 +1,17 @@
-import type { Metadata } from 'next';
-import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
-import { Libre_Baskerville } from 'next/font/google';
-import './globals.css';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { Analytics } from '@vercel/analytics/react';
+import { Libre_Baskerville } from 'next/font/google';
+
+import './globals.css';
 import opImage from '../../../public/opengraph-image.png';
 import MobileMenu from '@/components/MobileHeader';
 
-import { DesktopLocaleSwitcher } from '@/components/LocaleSwitcher';
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { useTranslations } from 'next-intl';
+import DesktopMenu from './components/DesktopMenu';
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -39,57 +39,6 @@ export const metadata: Metadata = {
   description:
     'Kennel Bullworks, uppfödare av Engelsk Cocker Spaniel i Skåne. Välkommen att läsa mer om oss och våra hundar.',
 };
-
-function DesktopMenu() {
-  const t = useTranslations('Links');
-  return (
-    <>
-      <nav className="hidden lg:block uppercase">
-        <ul className="flex gap-8 items-center">
-          <li>
-            <Link className="hover:text-slate-400" href="/">
-              {t('home')}
-            </Link>
-          </li>
-          |
-          <li>
-            <Link className="hover:text-slate-400" href="/hundar">
-              {t('ourDogs')}
-            </Link>
-          </li>
-          |
-          <li>
-            <Link className="hover:text-slate-400" href="/om-oss">
-              {t('about')}
-            </Link>
-          </li>
-          |
-          <li>
-            <Link className="hover:text-slate-400" href="/kontakt">
-              {t('contact')}
-            </Link>
-          </li>
-          |
-          <li>
-            <Link className="hover:text-slate-400" href="/valpar">
-              {t('puppies')}
-            </Link>
-          </li>
-          |
-          <li>
-            <Link className="hover:text-slate-400" href="/trimning">
-              {t('grooming')}
-            </Link>
-          </li>
-        </ul>
-
-        <div className="absolute right-36 top-20">
-          <DesktopLocaleSwitcher />
-        </div>
-      </nav>
-    </>
-  );
-}
 
 export default async function RootLayout({
   children,

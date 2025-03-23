@@ -43,9 +43,6 @@
   },
 
   "LocaleSwitcher": {
-    "label": "Ändra Språk",
-    "desktopLocale": "{locale, select, sv { Svenska} en { Engelska} other {Unknown}}",
-
-    "mobileLocale": "{locale, select, sv {Svenska } en {Engelska } other {Unknown}}"
+    "label": "Ändra Språk"
   }
 }
