@@ -12,6 +12,10 @@
     ]
   },
 
+  "About": {
+    "title": "Om oss"
+  },
+
   "HomePage": {
     "welcome": "Välkommen",
     "welcomeMessage": "till Bullworks uppfödning av Engelsk Cocker Spaniel.",

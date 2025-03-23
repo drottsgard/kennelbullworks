@@ -12,6 +12,10 @@
     ]
   },
 
+  "About": {
+    "title": "About us"
+  },
+
   "HomePage": {
     "welcome": "Welcome",
     "welcomeMessage": "to Bullworks breeding of English Cocker Spaniel.",
