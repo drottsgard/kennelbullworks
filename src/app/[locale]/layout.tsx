@@ -6,7 +6,6 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { Analytics } from '@vercel/analytics/react';
 
-import './globals.css';
 import opImage from '../../../public/opengraph-image.png';
 import MobileMenu from '@/components/MobileHeader';
 
