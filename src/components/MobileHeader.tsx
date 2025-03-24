@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useState } from 'react';
-import { MobileLocaleSwitcher } from './LocaleSwitcher';
+import { LocaleSwitcher } from '@/app/[locale]/components/LocaleSwitcher';
 function Hamburger(props: { onClick: () => void }) {
   return (
     <button
@@ -105,7 +105,7 @@ function MobileMenuContainer({ onLinkClick }: MobileMenuProps) {
             </a>
           </li>
           <li>
-            <MobileLocaleSwitcher />
+            <LocaleSwitcher />
           </li>
         </ul>
       </nav>
