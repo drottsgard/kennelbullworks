@@ -3,7 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
 import { Libre_Baskerville } from 'next/font/google';
 import './globals.css';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import opImage from '../../../public/opengraph-image.png';
 import MobileMenu from '@/components/MobileHeader';
 
