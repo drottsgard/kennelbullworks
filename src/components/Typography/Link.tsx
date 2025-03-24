@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
-import { Link } from '@/i18n/navigation';
+import Link from 'next/link';
 
 type LinkProps = PropsWithChildren<{
   to: string;

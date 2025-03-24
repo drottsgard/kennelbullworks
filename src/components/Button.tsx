@@ -1,4 +1,5 @@
-import { Link } from '@/i18n/navigation';
+
+import Link from 'next/link';
 import React, { FC, PropsWithChildren } from 'react';
 import { clsx } from 'clsx';
 
@@ -14,7 +15,6 @@ type ButtonProps = PropsWithChildren<{
 
 const ButtonLink: FC<ButtonProps> = ({
   variant = ButtonVariant.Primary,
-  onClick,
   children,
 }) => {
   return (

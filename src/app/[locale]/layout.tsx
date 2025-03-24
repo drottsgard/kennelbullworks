@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Libre_Baskerville } from 'next/font/google';
 import './globals.css';
-import { Link } from '@/i18n/navigation';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { Analytics } from '@vercel/analytics/react';
