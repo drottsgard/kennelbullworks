@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { Libre_Baskerville } from 'next/font/google';
+import './globals.css';
+import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { Analytics } from '@vercel/analytics/react';
-import { Libre_Baskerville } from 'next/font/google';
 
-import './globals.css';
 import opImage from '../../../public/opengraph-image.png';
 import MobileMenu from '@/components/MobileHeader';
 
@@ -47,7 +47,6 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  // Ensure that the incoming `locale` is valid
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();

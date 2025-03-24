@@ -1,6 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useState } from 'react';
 import { LocaleSwitcher } from '@/app/[locale]/components/LocaleSwitcher';
